@@ -11,12 +11,15 @@
 
 USE employees;
 
-SELECT first_name
+SELECT first_name, last_name, gender
 FROM employees
-WHERE first_name = 'Irena'
-   OR first_name = 'Vidya'
-   OR first_name = 'Maya'
-    AND gender = 'male';
+WHERE gender = 'M'
+   AND (
+    first_name = 'Irena'
+    OR first_name = 'Vidya'
+    OR first_name = 'Maya'
+          );
+
 
 SELECT last_name
 FROM employees
